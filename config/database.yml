@@ -88,6 +88,4 @@ test:
 #
 production:
   <<: *default
-  database: postapp_production
-  username: postapp
-  password: <%= ENV["POSTAPP_DATABASE_PASSWORD"] %>
+ database: <%= ENV["DATABASE_NAME"] %>

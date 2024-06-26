@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: my_app
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec rails s"
+    envVars:
+      - key: DATABASE_URL
+      - key: RAILS_MASTER_KEY
+        sync: false
+    
